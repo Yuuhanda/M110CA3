@@ -1,5 +1,6 @@
 package com.example.m110ca1
 
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -37,7 +38,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // Add a marker in Sydney and move the camera
         val uty = LatLng(-7.747033, 110.355398)
-        mMap.addMarker(MarkerOptions().position(uty).title("Universitas Teknologi Yogyakarta"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(uty,17.0f))
+        mMap.addMarker(MarkerOptions().position(uty).title("Universitas Teknologi Yogyakarta").snippet("-7.747033, 110.355398"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(uty))
+
+        val arc_de_triomphe = LatLng(48.8738, 2.2950)
+        mMap.addMarker(MarkerOptions().position(arc_de_triomphe).title("Arc de Triomphe"). snippet("48.8738, 2.2950"))
+
+        val hms_belfast = LatLng (51.5066, -0.0814)
+        mMap.addMarker(MarkerOptions().position(hms_belfast).title("HMS Belfast"). snippet("Town Class Light Cruiser, Retired. Museum"))
+
+        val uss_massachusetts = LatLng (41.7068, -71.1630)
+        mMap.addMarker(MarkerOptions().position(uss_massachusetts).title("USS Massachusetts BB59 Museum"). snippet("South Dakota Class Battleship, Retired. Museum"))
+
+        val uss_iowa = LatLng (33.7423, -118.2773)
+        mMap.addMarker(MarkerOptions().position(uss_iowa).title("USS Iowa BB61 Museum"). snippet("Iowa Class Battleship, Retired. Museum"))
     }
+
+   
 }
+
+
