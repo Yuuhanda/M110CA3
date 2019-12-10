@@ -54,7 +54,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(MarkerOptions().position(uss_iowa).title("USS Iowa BB61 Museum"). snippet("Iowa Class Battleship, Retired. Museum"))
     }
 
-   
+
 }
 
 
